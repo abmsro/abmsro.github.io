@@ -6,7 +6,7 @@
   <style>
   /*HERO STYLES*/
   .full-hero {
-    background color: #c7dbfc;
+    background-color: #c7dbfc;
     height: 50vh;
   }
 
@@ -14,20 +14,31 @@
   a {
     color: #f00;
   }
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 2em;
+    margin-top: 0;
+  }
 
   /* SOCIAL STYLES */
   .social-link {
     background: rgba(150, 150, 150, 0.5);
     color: blue;
+    display: inline-block;
+    height: 36px;
+    width: 36px;
   }
 
   /* BIO STYLES */
   .bio-wrapper {
-    font-size: 24px;
+    font-size: ;
   }
   .bio-box {
     border: 1px solid black;
-    font-size: 1rem;
+    font-size: 1em;
     width: 50%;
   }
   .bio-box h3 {
@@ -38,6 +49,17 @@
   }
   .bio-copy a {
     color: green;
+  }
+  .test-box {
+    background: #9db6dd;
+    width: 200px;
+  }
+  .test-box-nosizing {
+    border: 10px solid #000;
+    padding: 40px;
+  }
+  .test-box-sizing {
+    box-sizing: border-box;
   }
 </style>
   </head>
@@ -57,6 +79,17 @@
     </ul>
   </div>
     <h2>I'm an h2</h2>
+
+  <div class="test-box">
+    200px wide
+  </div>
+  <div class="test-box test-box-nosizing">
+    200px wide + border + padding = 300px
+  </div>
+  <div class="test-box test-box-nosizing test-box-sizing">
+    200px wide + border + padding + box-sizing: border-box = 200px
+  </div>
+
   <div class="bio-wrapper">
     <div class="bio-box">
       <h3>Michael Hartl</h3>
