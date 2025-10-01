@@ -31,16 +31,33 @@
                                minmax(2em,1fr);
       }
       .grid_2-8 {
-        grid-columns: 2 / 8;
+        grid-column: 2 / 8;
+      }
+      .grid_3-7 {
+        grid-column: 3 / 7;
+      }
+      .grid_4-6 {
+        grid-column: 4 / 6;
       }
       .header {
         background-color: #000;
         color: #fff;
         padding: 1em;
+        position: sticky;
         text-align: center;
+        top: 0;
+        z-index: 10;
       }
-
+      .header_menu {
+        column-gap: 1em;
+        display: flex;
+        justify-content: center;
+      }
+      .header_menu-link {
+        color: #a8d6f7
+      }
       .hero {
+        align-content: center;
         background-color: #a8d6f7;
         min-height: 50vh;
         text-align: center;
@@ -62,7 +79,15 @@
       .feature {
         min-height: 70vh;
       }
-
+      .feature_img {
+        background-image: url('/images/shark.jpg');
+        background-size: cover;
+      }
+      .feature_content {
+        background-color: #183a53;
+        color: #fff;
+        padding: 2em 2em;
+      }
       .footer {
         background-color: #ddd;
         padding: 4em 1em;
@@ -75,14 +100,32 @@
         I am a Header
       </div>
     </header>
-
-    <section class="hero">
-      <h1 class="hero_title">
+      <nav class="grid_3-7">
+        <ul class="header_menu menulist">
+            <li>
+                <a href="" class="header_menu-link">
+                Header Link
+                </a>
+            </li>
+            <li>
+                <a href="" class="header_menu-link">
+                    Header Link
+                </a>
+            </li>  
+        </ul>
+      </nav>
+    <section class="hero grid">
+      <h1 class="hero_title grid_2-8">
         I am an Important Message
       </h1>
-      <div class="hero_content">
+      <div class="hero_content grid_4-6">
         And I am a less important, but still a very important
         thing to consider.
+        <div class="landing_cta">
+            <a href="">
+                Click me!
+            </a>
+        </div>
       </div>
     </section>
 
@@ -103,14 +146,14 @@
       </div>
     </section>
 
-    <section class="info">
-      <h2 class="info_title">
+    <section class="info grid">
+      <h2 class="info_title grid_2-8">
         I am Some More info
       </h2>
-      <div class="subtitle">
+      <div class="subtitle grid_4-6">
         Say you are in the country.
       </div>
-      <div class="info_content">
+      <div class="info_content grid_3-7">
         <p>
           In some high land of lakes. Take almost any path you
           please, and ten to one it carries you down in a dale,
