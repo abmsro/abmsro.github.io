@@ -28,7 +28,10 @@
         box-sizing: border-box;
         display: grid;
         grid-template-columns: minmax(2em,1fr) repeat(6,minmax(auto,10em))
-                               minmax(2em,1fr) 
+                               minmax(2em,1fr);
+      }
+      .grid_2-8 {
+        grid-columns: 2 / 8;
       }
       .header {
         background-color: #000;
@@ -67,8 +70,8 @@
     </style>
   </head>
   <body>
-    <header class="header">
-      <div class="header_content">
+    <header class="header grid">
+      <div class="header_content grid_2-8">
         I am a Header
       </div>
     </header>
