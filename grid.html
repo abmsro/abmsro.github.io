@@ -23,17 +23,29 @@
       .grid-header {
         background-color: #ccc;
         grid-area: header;
+        padding: 1em;
+        text-align: center;
       }
       .grid-menu {
         background-color: #c0c0c0;
         grid-area: menu;
+        padding: 1em;
+      }
+      .grid-menu ul,
+      .grid-panel ul,
+      .grid-footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
       }
       .grid-content {
         grid-area: content;
+        padding: 3em 3em 3em;
       }
       .grid-panel {
-        background-color: #eee;
+        border-left: 1px solid rbga(0,0,0,0.1)
         grid-area: panel;
+        padding: 4em 2em 4em 3em;
       }
       .grid-footer {
         background-color: #ddd;
@@ -45,6 +57,14 @@
         grid-column: content;
         grid-row: header-start / footer-end;
         z-index: 2;
+      }
+      .grid-banner {
+        align-self: start;
+        background-color: rgba(168,214,247,0.9);
+        grid-column: content-start / panel-end;
+        grid-row-start: content-start;
+        padding: 1em;
+        z-index: 10;
       }
       .grid {
         display: grid;
@@ -68,7 +88,7 @@
       <nav class="grid-menu">
         I am a Menu
       </nav>
-      <article class="grid-content grid-expand">
+      <article class="grid-content">
         I am Content
       </article>
       <aside class="grid-panel">
@@ -77,6 +97,9 @@
       <footer class="grid-footer">
         I am a Footer
       </footer>
+      <div class="grid-banner">
+        I am a banner
+      </div>
     </div>
   </body>
 </html>
