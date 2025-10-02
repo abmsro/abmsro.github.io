@@ -1,0 +1,8 @@
+a. What is the IP address of the website www.johnstoncc.edu
+	The IP address is 3.209.26.193
+
+b. What TCP ports are open on the IP address? 
+	The open ports are 80 and 443.
+
+c. For each open port, what application is using the open port? 
+	Port 80 says “301 Permanently Moved”, version HTTP/1.1 Moved permanently and port 443 says “Modern Campus | CMS - Hosting”, version HTTP/1.1 200 OK.
